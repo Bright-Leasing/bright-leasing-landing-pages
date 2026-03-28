@@ -1770,31 +1770,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    const data = {
-      car_price: document.getElementById('wiz-car-price').value,
-      income:    document.getElementById('wiz-income').value,
-      state:     document.getElementById('wiz-state').value,
-      employer:  document.getElementById('wiz-employer').value,
-      first_name: fname,
-      last_name:  lname,
-      phone:      phone,
-      email:      email,
-      source:     'ato-said-yes-landing'
+    // Get UTM source from URL for traffic source tracking
+    const urlParams = new URLSearchParams(window.location.search);
+    const trafficSource = urlParams.get('utm_source') || 'direct';
+
+    const hubspotData = {
+      fields: [
+        { name: 'firstname', value: fname },
+        { name: 'lastname', value: lname },
+        { name: 'email', value: email },
+        { name: 'phone', value: phone },
+        { name: 'company', value: document.getElementById('wiz-employer').value.trim() },
+        { name: 'state', value: document.getElementById('wiz-state').value },
+        { name: 'vehicle_price', value: document.getElementById('wiz-car-price').value.replace(/\D/g, '') },
+        { name: 'salary', value: document.getElementById('wiz-income').value.replace(/\D/g, '') },
+        { name: 'traffic_source', value: trafficSource },
+        { name: 'landing_page_source', value: 'ato-said-yes' }
+      ],
+      context: {
+        pageUri: window.location.href,
+        pageName: document.title
+      }
     };
 
     try {
-      await fetch('/api/quote', {
+      await fetch('https://api.hsforms.com/submissions/v3/integration/submit/442606313/d3b46572-ccf1-4dba-b23c-e81d749a07b8', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(hubspotData),
       });
     } catch (err) {
-      // Endpoint is a placeholder
+      console.error('HubSpot submission error:', err);
     }
-
-    // Fire conversion events
-    // gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXXX'});
-    // fbq('track', 'Lead');
 
     // GTM dataLayer event for conversion tracking
     window.dataLayer = window.dataLayer || [];
