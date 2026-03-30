@@ -1773,6 +1773,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Get UTM source from URL for traffic source tracking
     const urlParams = new URLSearchParams(window.location.search);
     const trafficSource = urlParams.get('utm_source') || 'direct';
+    const gclid = urlParams.get('gclid') || '';
+    const fbclid = urlParams.get('fbclid') || '';
 
     const hubspotData = {
       fields: [
@@ -1785,6 +1787,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         { name: 'vehicle_price', value: document.getElementById('wiz-car-price').value.replace(/\D/g, '') },
         { name: 'salary', value: document.getElementById('wiz-income').value.replace(/\D/g, '') },
         { name: 'traffic_source', value: trafficSource },
+        { name: 'gclid', value: gclid },
+        { name: 'fbclid', value: fbclid },
         { name: 'landing_page_source', value: 'price-leader' }
       ],
       context: {
