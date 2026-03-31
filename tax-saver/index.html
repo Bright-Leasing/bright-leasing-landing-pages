@@ -1735,7 +1735,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   async function wizardSubmit() {
     const fname = document.getElementById('wiz-fname').value.trim();
     const lname = document.getElementById('wiz-lname').value.trim();
-    const phone = document.getElementById('wiz-phone').value.trim();
+    const rawPhone = document.getElementById('wiz-phone').value.trim();
+    // Convert to E.164 format (+61...)
+    const phone = (function(p) {
+      p = p.replace(/[\s\-()]/g, '');
+      if (p.startsWith('+')) return p;
+      if (p.startsWith('0')) return '+61' + p.substring(1);
+      if (p.startsWith('61')) return '+' + p;
+      return '+61' + p;
+    })(rawPhone);
     const email = document.getElementById('wiz-email').value.trim();
 
     if (!fname || !lname || !phone || !email) {
