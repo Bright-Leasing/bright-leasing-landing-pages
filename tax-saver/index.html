@@ -824,6 +824,7 @@
       flex-shrink: 0;
     }
     .testi-name { font-size: 0.88rem; font-weight: 600; }
+    .testi-role { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }
     .testi-source {
       font-size: 0.72rem;
       color: var(--text-muted);
@@ -832,6 +833,24 @@
       gap: 4px;
     }
     .testi-source svg { color: #4285F4; }
+
+    /* FAQ */
+    .faq-section { background: #f8f9fb; padding: 72px 24px; }
+    .faq-inner { max-width: 780px; margin: 0 auto; }
+    .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; background: none; border: none; padding: 20px 24px;
+      font-size: 1rem; font-weight: 600; color: var(--navy); text-align: left;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      gap: 12px;
+    }
+    .faq-q:hover { background: #f1f5f9; }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.2s; flex-shrink: 0; }
+    .faq-q.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 24px 20px; }
+    .faq-a p { color: #4b5563; line-height: 1.7; margin: 0; font-size: 0.95rem; }
+    .faq-a.visible { display: block; }
 
     /* ─── BOTTOM CTA ─── */
     .bottom-cta {
@@ -1186,10 +1205,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Step 4: Employer -->
       <div class="wizard-step" data-step="4">
         <div class="wizard-header"></div>
-        <h2 class="wizard-question">Where do you currently work?</h2>
+        <h2 class="wizard-question">Where do you currently work? <span style="font-size:0.75em;font-weight:400;color:#888;">(optional)</span></h2>
         <div class="wizard-body">
           <input type="text" class="wizard-input" id="wiz-employer" placeholder="e.g. Woolworths, BHP, NSW Health" style="text-align: left;" />
-          <p class="wizard-hint">We won't contact them — it's just to give an accurate price.</p>
+          <p class="wizard-hint">Optional — helps us give a more accurate quote. We won't contact them.</p>
           <button class="wizard-next" onclick="wizardNext(4)">Next</button>
         </div>
         <div class="wizard-progress">
@@ -1246,8 +1265,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
       </div>
       <div class="trust-text">
-        <strong>5.0 Google Rating</strong>
-        <span>Verified reviews</span>
+        <strong>5.0 ★ Google Rating</strong>
+        <span>4 verified reviews</span>
       </div>
     </div>
     <div class="trust-item">
@@ -1528,17 +1547,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="section-header">
       <div class="section-label">Customer reviews</div>
       <h2 class="section-title">Don't just take our word for it</h2>
-      <p class="section-sub">Real customers. Real savings. Real Google reviews.</p>
+      <p class="section-sub">Based on 4 Google reviews &nbsp;★★★★★ 5.0</p>
     </div>
     <div class="testi-grid">
 
       <div class="testi-card">
         <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-quote">"I honestly had no idea how much I was leaving on the table by just buying a car outright. The Bright Leasing team walked me through everything — I'm now driving a Tesla Model Y and saving over $900 a month compared to what I was paying before."</p>
+        <p class="testi-quote">"I have had Jaime manage my novated leases before so jumped to him when I saw he started out on his own. Bright leasing truly puts the customer at the centre and you feel it."</p>
         <div class="testi-author">
           <div class="testi-avatar">MJ</div>
           <div>
-            <div class="testi-name">Mark J.</div>
+            <div class="testi-name">Mark Jelleison</div>
+            <div class="testi-role">Verified Google Review</div>
             <div class="testi-source">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
               Google Review
@@ -1549,11 +1569,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="testi-card">
         <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-quote">"Super easy process from start to finish. I was skeptical about novated leasing at first but the team made it effortless. My payroll handles everything automatically and I just drive. The monthly cost is way better than I expected."</p>
+        <p class="testi-quote">"Jamie's been a great help and made the process super simple. Very responsive and checks in regularly to make sure everything's going well. Definitely recommend!"</p>
         <div class="testi-author">
-          <div class="testi-avatar">J</div>
+          <div class="testi-avatar">JF</div>
           <div>
-            <div class="testi-name">Jake</div>
+            <div class="testi-name">Jake F.</div>
+            <div class="testi-role">Verified Google Review</div>
             <div class="testi-source">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
               Google Review
@@ -1564,16 +1585,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="testi-card">
         <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-quote">"The FBT exemption is a genuine game-changer and Bright Leasing explained it better than anyone else I spoke to. They handled all the employer paperwork, got everything set up in about a week. The whole-of-life cost is outstanding value."</p>
+        <p class="testi-quote">"Absolutely fantastic to deal with, nothing was a problem. Highly recommend!!"</p>
         <div class="testi-author">
           <div class="testi-avatar">SS</div>
           <div>
-            <div class="testi-name">Shane S.</div>
+            <div class="testi-name">Shane Soar</div>
+            <div class="testi-role">Verified Google Review</div>
             <div class="testi-source">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
               Google Review
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"Jamie from Bright Leasing was absolutely fantastic to deal with from start to finish. He made the whole process of getting my EV novated lease sorted incredibly smooth and stress-free. His knowledge, responsiveness, and genuine willingness to help made all the difference."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">ME</div>
+          <div>
+            <div class="testi-name">Mena Elchagie</div>
+            <div class="testi-role">Verified Google Review</div>
+            <div class="testi-source">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              Google Review
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-label">Common questions</div>
+    <h2 class="section-title">Good questions. Here are the honest answers.</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Will my employer agree to this?
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-a">
+          <p>Most employers already offer salary packaging — they just don't advertise it. Novated leasing is a standard, ATO-approved benefit that requires zero cost or risk to your employer. We handle all the paperwork and liaise with payroll on your behalf. If your employer isn't set up yet, we'll get them sorted — it usually takes a few days.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What happens if I change jobs?
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-a">
+          <p>Your lease stays with you, not your employer. If you move jobs, you simply transfer the lease salary packaging arrangement to your new employer. In the short gap between jobs, you make payments from your post-tax income — and then resume pre-tax deductions once you're set up with your new payroll. It's designed to be portable.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is this actually legal? It sounds too good to be true.
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-a">
+          <p>100% legal — and the ATO literally wrote the rules for it. The FBT exemption for eligible electric vehicles was introduced by the Australian Government in 2022 (Treasury Laws Amendment — Electric Car Discount Act). It's not a loophole; it's an intentional policy to encourage EV uptake. Hundreds of thousands of Australians use novated leasing every year.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What's actually included in the lease repayment?
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-a">
+          <p>Everything. Your single pre-tax deduction covers the car finance, comprehensive insurance, registration, servicing, tyres, and roadside assistance — for the full lease term. No surprise bills, no separate policies to manage. We handle it all as a single packaged cost.</p>
         </div>
       </div>
 
@@ -1719,17 +1808,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         return;
       }
     }
-    if (current === 4) {
-      if (!document.getElementById('wiz-employer').value.trim()) {
-        document.getElementById('wiz-employer').style.borderColor = '#e74c3c';
-        return;
-      }
-    }
+    // Step 4 employer is optional — no validation required
     showStep(current + 1);
   }
 
   function wizardBack(current) {
     showStep(current - 1);
+  }
+
+  function toggleFaq(btn) {
+    var answer = btn.nextElementSibling;
+    var isOpen = btn.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-q.open').forEach(function(b) {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('visible');
+    });
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('visible');
+    }
   }
 
   async function wizardSubmit() {
