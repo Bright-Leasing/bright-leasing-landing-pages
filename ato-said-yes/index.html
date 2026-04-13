@@ -1027,20 +1027,19 @@
       .included-grid { grid-template-columns: 1fr; }
       .comparison-table th, .comparison-table td { padding: 12px 14px; font-size: 0.82rem; }
     }
-      /* ─── FAQ ─── */
-    .faq { padding: 80px 24px; background: #162130; }
-    .faq .section-label { color: #52BAC7; }
-    .faq .section-title { color: #ffffff; }
-    .faq .section-sub { color: rgba(255,255,255,0.65); }
-    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
-    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
-    .faq-question {
+    /* ─── COMMON QUESTIONS ─── */
+    .faq-section { background: #162130; padding: 72px 24px; }
+    .faq-inner { max-width: 780px; margin: 0 auto; }
+    .faq-section .section-title { color: #ffffff; margin-bottom: 40px; }
+    .faq-section .section-label { color: #52BAC7; }
+    .faq-item { background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.1); border-radius: 0; overflow: hidden; }
+    .faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.1); }
+    .faq-q {
       width: 100%;
-      background: transparent;
+      background: none;
       border: none;
       color: #ffffff;
-      font-family: 'Poppins', sans-serif;
+      font-family: inherit;
       font-size: 1rem;
       font-weight: 600;
       text-align: left;
@@ -1052,28 +1051,12 @@
       gap: 16px;
       line-height: 1.4;
     }
-    .faq-question:hover { color: #FFBD34; }
-    .faq-icon {
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      border: 2px solid #52BAC7;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.25s ease, background 0.2s;
-    }
-    .faq-item.open .faq-icon { background: #52BAC7; transform: rotate(45deg); }
-    .faq-icon svg { width: 12px; height: 12px; stroke: #52BAC7; transition: stroke 0.2s; }
-    .faq-item.open .faq-icon svg { stroke: #0f1923; }
-    .faq-answer {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-    }
-    .faq-item.open .faq-answer { max-height: 400px; padding-bottom: 20px; }
-    .faq-answer p { color: rgba(255,255,255,0.65); font-size: 0.97rem; line-height: 1.75; margin: 0; }
+    .faq-q:hover { background: transparent; color: #FFBD34; }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.2s; flex-shrink: 0; color: #52BAC7; }
+    .faq-q.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 0 20px; }
+    .faq-a p { color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0; font-size: 0.95rem; }
+    .faq-a.visible { display: block; }
 </style>
 </head>
 <body>
@@ -1629,55 +1612,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<!-- ─── FAQ ─── -->
-<section class="faq" id="faq">
-  <div class="section-inner">
-    <div class="section-header" style="text-align:center; max-width:600px; margin:0 auto 48px;">
-      <div class="section-label">Got questions?</div>
-      <h2 class="section-title">Frequently asked questions</h2>
-      <p class="section-sub" style="margin:0 auto;">Everything you need to know about novated leasing with Bright.</p>
-    </div>
+<!-- ─── COMMON QUESTIONS ─── -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-label">Common questions</div>
+    <h2 class="section-title">Good questions. Here are the honest answers.</h2>
     <div class="faq-list">
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-q" onclick="toggleFaq(this)">
           Will my employer agree to this?
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          <span class="faq-arrow">&#9662;</span>
         </button>
-        <div class="faq-answer" role="region">
+        <div class="faq-a">
           <p>Almost certainly yes — novated leasing is one of the most popular employee benefits in Australia, and most employers are already set up to offer it. All it takes is a simple payroll deduction arrangement, and there's no cost or risk to your employer whatsoever.</p>
           <p style="margin-top:12px;">If your employer isn't already on board, we handle the conversation for you. We'll reach out to your HR or payroll team with everything they need to get you set up — typically within a few business days. Many of the employers we work with were first introduced to novated leasing by an employee just like you.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-q" onclick="toggleFaq(this)">
           What happens if I change jobs?
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          <span class="faq-arrow">&#9662;</span>
         </button>
-        <div class="faq-answer" role="region">
+        <div class="faq-a">
           <p>Changing jobs doesn't mean losing your car. The lease stays with you — it simply transfers to your new employer's payroll. If your new employer is already set up for novated leasing, the switch is usually seamless. If they're not, we'll get them set up quickly.</p>
           <p style="margin-top:12px;">In the unlikely event your new employer won't participate, you have a few straightforward options: pay the lease instalments directly yourself during the gap period, refinance, or in some cases end the lease early. We'll walk you through exactly what applies to your situation — there's no need to stress about it before it happens.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-q" onclick="toggleFaq(this)">
           What's actually included in my lease payments?
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          <span class="faq-arrow">&#9662;</span>
         </button>
-        <div class="faq-answer" role="region">
+        <div class="faq-a">
           <p>That's one of the best parts. A novated lease bundles all of your car running costs into a single regular payment — so you're not just financing the vehicle, you're covering fuel, registration, insurance, servicing, and tyres as well. All of those costs are drawn from your pre-tax salary, compounding your savings.</p>
           <p style="margin-top:12px;">At the end of the lease term, you can choose to sell the car and get another one, buy the car for its residual value or re-lease it. Most of our customers find the all-in payment is actually less than what they were spending across all those costs separately — with far less hassle along the way.</p>
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
+        <button class="faq-q" onclick="toggleFaq(this)">
           Is this actually legal — or too good to be true?
-          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          <span class="faq-arrow">&#9662;</span>
         </button>
-        <div class="faq-answer" role="region">
+        <div class="faq-a">
           <p>Completely legal — and the ATO knows all about it. Novated leasing is a form of salary packaging that's been part of Australian tax law for decades. The tax benefit comes from paying for your car using pre-tax salary, which reduces your taxable income. It's not a loophole; it's a legislated employee benefit that hundreds of thousands of Australians use every year.</p>
           <p style="margin-top:12px;">The savings are real because the structure is legitimate. You still pay Fringe Benefits Tax (FBT) on the benefit, but in most cases the overall tax outcome is significantly better than buying a car outright or with a standard loan. We're fully transparent about every number — what you save, what you pay, and why.</p>
         </div>
@@ -1942,22 +1922,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 </script>
 
-<script>
-    // ─── FAQ accordion ───
-    document.querySelectorAll('.faq-question').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var item = this.closest('.faq-item');
-        var isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(function(el) {
-          el.classList.remove('open');
-          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        });
-        if (!isOpen) {
-          item.classList.add('open');
-          this.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-</script>
 </body>
 </html>
