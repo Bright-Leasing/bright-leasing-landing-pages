@@ -1027,7 +1027,53 @@
       .included-grid { grid-template-columns: 1fr; }
       .comparison-table th, .comparison-table td { padding: 12px 14px; font-size: 0.82rem; }
     }
-  </style>
+  
+    /* ─── FAQ ─── */
+    .faq { padding: 80px 24px; background: var(--navy2); }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: left;
+      padding: 22px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      line-height: 1.4;
+    }
+    .faq-question:hover { color: var(--yellow); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, background 0.2s;
+    }
+    .faq-item.open .faq-icon { background: var(--teal); transform: rotate(45deg); }
+    .faq-icon svg { width: 12px; height: 12px; stroke: var(--teal); transition: stroke 0.2s; }
+    .faq-item.open .faq-icon svg { stroke: var(--navy); }
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 400px; padding-bottom: 20px; }
+    .faq-answer p { color: var(--text-muted); font-size: 0.97rem; line-height: 1.75; margin: 0; }
+
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1581,6 +1627,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="section-header" style="text-align:center; max-width:600px; margin:0 auto 48px;">
+      <div class="section-label">Got questions?</div>
+      <h2 class="section-title">Frequently asked questions</h2>
+      <p class="section-sub" style="margin:0 auto;">Everything you need to know about novated leasing with Bright.</p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What is a novated lease?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>A novated lease is a three-way agreement between you, your employer, and Bright Leasing. Your employer deducts your car payments directly from your pre-tax salary — reducing your taxable income so you pay less income tax. It's one of the most tax-effective ways to own a car in Australia, and it works with EVs, hybrids, and most petrol vehicles.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Who is eligible for a novated lease?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Almost any permanent or full-time employee in Australia can apply — you don't need to be a high earner. Your employer simply needs to agree to participate (most do). There's no minimum income threshold, and you can apply whether you work in the private sector, a charity, or a government organisation. Not-for-profit employees often save even more due to FBT concessions.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What's included in the weekly payments?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Your single payment covers everything: the lease finance, comprehensive insurance, registration, servicing, tyres, roadside assistance, and — for eligible EVs — home charging costs. There are no surprise bills or separate accounts. One pre-tax deduction keeps it simple and fully managed for the life of your lease.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How much could I actually save?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Savings vary based on your income, the car you choose, and lease term — but most customers save between $3,000 and $8,000 per year in income tax alone. EV drivers can save even more because eligible battery electric vehicles are currently exempt from Fringe Benefits Tax (FBT), thanks to the ATO's EV incentive. Use our quote tool above to get a personalised number in under 60 seconds.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ─── BOTTOM CTA ─── -->
 <section class="bottom-cta" id="contact">
   <div class="bottom-cta-inner">
@@ -1824,5 +1925,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 </script>
 
+<script>
+
+    // ─── FAQ accordion ───
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el) {
+          el.classList.remove('open');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+</script>
 </body>
 </html>
