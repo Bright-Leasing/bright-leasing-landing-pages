@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>From $147/week — Drive an EV for Less Than You Think | Bright Leasing</title>
-  <meta name="description" content="Electric vehicles from $147/week after tax. FBT-exempt novated leasing packages include insurance, rego, servicing & charging. Get a free quote in 60 seconds." />
+  <title>Save $7,115* Per Year on Your Next Car | Bright Leasing Novated Lease</title>
+  <meta name="description" content="Keep more of your salary with an FBT-exempt novated lease. Pay from pre-tax income, save on GST, and drive a brand new EV. Free quote in 60 seconds." />
   <link rel="icon" href="../logos/Logo Suite/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -782,8 +782,8 @@
     .testimonials { background: var(--navy); }
     .testi-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
     .testi-card {
       background: var(--card-bg);
@@ -824,6 +824,7 @@
       flex-shrink: 0;
     }
     .testi-name { font-size: 0.88rem; font-weight: 600; }
+    .testi-role { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }
     .testi-source {
       font-size: 0.72rem;
       color: var(--text-muted);
@@ -832,6 +833,27 @@
       gap: 4px;
     }
     .testi-source svg { color: #4285F4; }
+
+    /* FAQ */
+    .faq-section { background: #162130; padding: 72px 24px; }
+    .faq-inner { max-width: 780px; margin: 0 auto; }
+    .faq-section .section-title { color: #ffffff; }
+    .faq-section .section-label { color: #52BAC7; }
+    .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: #52BAC7; border: none; border-bottom: 4px solid #162130; border-radius: 8px; overflow: hidden; margin-bottom: 4px; }
+    .faq-item:first-child { border-top: none; }
+    .faq-q {
+      width: 100%; background: none; border: none; padding: 20px 24px;
+      font-size: 1.3rem; font-weight: 600; color: #000000; text-align: left;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      gap: 12px;
+    }
+    .faq-q:hover { background: #3da8b5; color: #000000; font-weight: 700; cursor: pointer; }
+    .faq-arrow { font-size: 1.6rem; transition: transform 0.2s; flex-shrink: 0; color: #0f1923; }
+    .faq-q.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 24px 20px; }
+    .faq-a p { color: #0f1923; line-height: 1.7; margin: 0; font-size: 0.95rem; }
+    .faq-a.visible { display: block; }
 
     /* ─── BOTTOM CTA ─── */
     .bottom-cta {
@@ -1013,7 +1035,7 @@
       .hiw-steps::before { display: none; }
       .vehicle-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
       .included-grid { grid-template-columns: 1fr 1fr; }
-      .testi-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+      .testi-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; margin: 0 auto; }
       .footer-top { flex-direction: column; }
     }
     @media (max-width: 640px) {
@@ -1026,8 +1048,8 @@
       .hero-price-strip { flex-direction: column; gap: 12px; }
       .included-grid { grid-template-columns: 1fr; }
       .comparison-table th, .comparison-table td { padding: 12px 14px; font-size: 0.82rem; }
-    }
-  </style>
+      .testi-grid { grid-template-columns: 1fr; }
+    }</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1073,37 +1095,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<!-- ─── HERO — PRICE LEADER ANGLE ─── -->
+<!-- ─── HERO — TAX SAVER ANGLE ─── -->
 <section class="hero" id="home">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-badge"><span></span> Prices You Won't Believe</div>
-      <h1>Drive an EV from<br><span class="price-highlight">$147/week.</span><br><em>Seriously.</em></h1>
-      <p class="hero-sub">Insurance, rego, servicing & charging included. One pre-tax payment. No deposit.</p>
+      <div class="hero-badge"><span></span> Maximise Your Take-Home Pay</div>
+      <h1>Keep <span class="price-highlight">$7,115*</span> more<br>per year.<br><em>It's your money.</em></h1>
+      <p class="hero-sub">Pay for your car with pre-tax dollars. No FBT on EVs. No GST on the purchase. No deposit.</p>
 
       <div class="hero-price-strip">
         <div class="price-card">
-          <div class="model">BYD Atto 1</div>
-          <div class="amount">$147</div>
-          <div class="period">per week after tax</div>
+          <div class="model">On $85k salary</div>
+          <div class="amount">$4,200+</div>
+          <div class="period">saved per year</div>
         </div>
         <div class="price-card">
-          <div class="model">BYD Sealion 7</div>
-          <div class="amount">$219</div>
-          <div class="period">per week after tax</div>
+          <div class="model">On $120k salary</div>
+          <div class="amount">$5,800+</div>
+          <div class="period">saved per year</div>
         </div>
         <div class="price-card">
-          <div class="model">Tesla Model Y</div>
-          <div class="amount">$285</div>
-          <div class="period">per week after tax</div>
+          <div class="model">On $180k salary</div>
+          <div class="amount">$8,400+</div>
+          <div class="period">saved per year</div>
         </div>
       </div>
 
       <div class="hero-cta-group">
-        <a href="#quote" class="btn btn-yellow" style="padding: 14px 28px;">See My Price →</a>
+        <a href="#quote" class="btn btn-yellow" style="padding: 14px 28px;">See My Savings →</a>
         <a href="tel:1300988938" class="btn btn-outline">Call 1300 988 938</a>
       </div>
-      <div class="urgency-badge">Limited pricing — FY26 rates lock in when you apply</div>
+      <div class="urgency-badge">FY26 tax benefits — lock in your rate before June 30</div>
     </div>
 
     <div class="wizard-card" id="quote">
@@ -1186,10 +1208,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Step 4: Employer -->
       <div class="wizard-step" data-step="4">
         <div class="wizard-header"></div>
-        <h2 class="wizard-question">Where do you currently work?</h2>
+        <h2 class="wizard-question">Where do you currently work? <span style="font-size:0.75em;font-weight:400;color:#888;">(optional)</span></h2>
         <div class="wizard-body">
           <input type="text" class="wizard-input" id="wiz-employer" placeholder="e.g. Woolworths, BHP, NSW Health" style="text-align: left;" />
-          <p class="wizard-hint">We won't contact them — it's just to give an accurate price.</p>
+          <p class="wizard-hint">Optional — helps us give a more accurate quote. We won't contact them.</p>
           <button class="wizard-next" onclick="wizardNext(4)">Next</button>
         </div>
         <div class="wizard-progress">
@@ -1243,11 +1265,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="trust-inner">
     <div class="trust-item">
       <div class="trust-icon">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
       </div>
       <div class="trust-text">
-        <strong>5.0 Google Rating</strong>
-        <span>Verified reviews</span>
+        <strong>$7,115 Tax Saved</strong>
+        <span>*Average annual customer savings</span>
       </div>
     </div>
     <div class="trust-item">
@@ -1284,17 +1306,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="vehicles" id="vehicles">
   <div class="section-inner">
     <div class="section-header">
-      <div class="section-label">Lowest prices guaranteed</div>
-      <h2 class="section-title">Your next car costs less than you think</h2>
-      <p class="section-sub">Net costs shown after tax savings. All figures based on a typical income earner — your savings may be higher.</p>
+      <div class="section-label">Real savings, real cars</div>
+      <h2 class="section-title">See how much you'd save on these popular EVs</h2>
+      <p class="section-sub">Annual tax savings based on a typical $100k salary. Your savings may be even higher.</p>
     </div>
     <div class="vehicle-grid">
 
-      <!-- BYD Atto 1 — Price Leader -->
+      <!-- BYD Atto 1 -->
       <div class="vehicle-card featured">
-        <div class="vehicle-badge">Best Value</div>
+        <div class="vehicle-badge">Biggest Tax Saving</div>
         <div class="vehicle-img">
-          <img src="images/byd-atto1.jpg" alt="BYD Atto 1" />
+          <img src="/images/byd-atto1.jpg" alt="BYD Atto 1" />
         </div>
         <div class="vehicle-body">
           <div class="vehicle-brand">BYD</div>
@@ -1302,24 +1324,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="vehicle-fbt">FBT-Exempt</div>
           <div class="vehicle-pricing">
             <div class="vehicle-price-main">
-              <span class="label">Net cost</span>
-              <span class="price">$147</span>
-              <span class="price-sub">per week after tax</span>
+              <span class="label">You save</span>
+              <span class="price">$5,283</span>
+              <span class="price-sub">per year in tax</span>
             </div>
             <div class="vehicle-saving">
-              <span class="save-label">You save</span>
-              <span class="save-amount">$107/wk</span>
-              <span class="save-period">vs buying outright</span>
+              <span class="save-label">Net cost</span>
+              <span class="save-amount">$147/wk</span>
+              <span class="save-period">after tax savings</span>
             </div>
           </div>
-          <a href="#quote" class="btn btn-yellow vehicle-cta">Get This Price →</a>
+          <a href="#quote" class="btn btn-yellow vehicle-cta">See My Savings →</a>
         </div>
       </div>
 
       <!-- BYD Sealion 7 -->
       <div class="vehicle-card">
         <div class="vehicle-img">
-          <img src="images/byd-sealion7.jpg" alt="BYD Sealion 7" />
+          <img src="/images/byd-sealion7.jpg" alt="BYD Sealion 7" />
         </div>
         <div class="vehicle-body">
           <div class="vehicle-brand">BYD</div>
@@ -1327,17 +1349,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="vehicle-fbt">FBT-Exempt</div>
           <div class="vehicle-pricing">
             <div class="vehicle-price-main">
-              <span class="label">Net cost</span>
-              <span class="price">$219</span>
-              <span class="price-sub">per week after tax</span>
+              <span class="label">You save</span>
+              <span class="price">$8,006</span>
+              <span class="price-sub">per year in tax</span>
             </div>
             <div class="vehicle-saving">
-              <span class="save-label">You save</span>
-              <span class="save-amount">$167/wk</span>
-              <span class="save-period">vs buying outright</span>
+              <span class="save-label">Net cost</span>
+              <span class="save-amount">$219/wk</span>
+              <span class="save-period">after tax savings</span>
             </div>
           </div>
-          <a href="#quote" class="btn btn-yellow vehicle-cta">Get This Price →</a>
+          <a href="#quote" class="btn btn-yellow vehicle-cta">See My Savings →</a>
         </div>
       </div>
 
@@ -1345,7 +1367,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="vehicle-card">
         <div class="vehicle-badge" style="background: var(--teal); color: var(--navy);">Most Popular</div>
         <div class="vehicle-img">
-          <img src="images/tesla-model-y.jpg" alt="Tesla Model Y" />
+          <img src="/images/tesla-model-y.jpg" alt="Tesla Model Y" />
         </div>
         <div class="vehicle-body">
           <div class="vehicle-brand">Tesla</div>
@@ -1353,17 +1375,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="vehicle-fbt">FBT-Exempt</div>
           <div class="vehicle-pricing">
             <div class="vehicle-price-main">
-              <span class="label">Net cost</span>
-              <span class="price">$285</span>
-              <span class="price-sub">per week after tax</span>
+              <span class="label">You save</span>
+              <span class="price">$10,543</span>
+              <span class="price-sub">per year in tax</span>
             </div>
             <div class="vehicle-saving">
-              <span class="save-label">You save</span>
-              <span class="save-amount">$220/wk</span>
-              <span class="save-period">vs buying outright</span>
+              <span class="save-label">Net cost</span>
+              <span class="save-amount">$285/wk</span>
+              <span class="save-period">after tax savings</span>
             </div>
           </div>
-          <a href="#quote" class="btn btn-yellow vehicle-cta">Get This Price →</a>
+          <a href="#quote" class="btn btn-yellow vehicle-cta">See My Savings →</a>
         </div>
       </div>
 
@@ -1375,8 +1397,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="included" id="included">
   <div class="section-inner">
     <div class="section-header">
-      <div class="section-label">All-inclusive</div>
-      <h2 class="section-title">One monthly payment covers everything</h2>
+      <div class="section-label">All tax-deductible</div>
+      <h2 class="section-title">Every cost is covered — and every dollar reduces your tax</h2>
       <p class="section-sub">No surprise bills. No separate accounts. Every cost bundled into one pre-tax deduction.</p>
     </div>
     <div class="included-grid">
@@ -1430,9 +1452,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="comparison" id="compare">
   <div class="section-inner">
     <div class="section-header" style="text-align: center; max-width: 600px; margin: 0 auto 52px;">
-      <div class="section-label">Why novated leasing wins</div>
-      <h2 class="section-title">Novated lease vs buying outright</h2>
-      <p class="section-sub" style="margin: 0 auto;">See why thousands of Australians are switching to salary sacrifice.</p>
+      <div class="section-label">The tax advantage is massive</div>
+      <h2 class="section-title">Where your tax savings come from</h2>
+      <p class="section-sub" style="margin: 0 auto;">Every line item below is money you keep instead of giving to the ATO.</p>
     </div>
     <div class="comparison-table">
       <table>
@@ -1445,39 +1467,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </thead>
         <tbody>
           <tr>
-            <td>Pay from pre-tax salary</td>
-            <td class="check">&#10003; Yes</td>
-            <td class="cross">&#10007; No</td>
+            <td>Paid from pre-tax income</td>
+            <td class="check">&#10003; Yes — every pay cycle</td>
+            <td class="cross">&#10007; After-tax dollars</td>
           </tr>
           <tr>
-            <td>FBT-exempt on EVs</td>
-            <td class="check">&#10003; Yes</td>
+            <td>GST on purchase price</td>
+            <td class="check">&#10003; Saved (up to $8,300)</td>
+            <td class="cross">&#10007; You pay the full GST</td>
+          </tr>
+          <tr>
+            <td>Fringe Benefits Tax</td>
+            <td class="check">&#10003; $0 FBT on EVs</td>
             <td class="cross">&#10007; N/A</td>
           </tr>
           <tr>
-            <td>Insurance included</td>
-            <td class="check">&#10003; Bundled</td>
-            <td class="cross">&#10007; Separate bill</td>
+            <td>Income tax reduction</td>
+            <td class="check">&#10003; Lower taxable income</td>
+            <td class="cross">&#10007; No reduction</td>
           </tr>
           <tr>
-            <td>Rego & CTP included</td>
-            <td class="check">&#10003; Bundled</td>
-            <td class="cross">&#10007; Separate bill</td>
-          </tr>
-          <tr>
-            <td>Servicing included</td>
-            <td class="check">&#10003; Bundled</td>
-            <td class="cross">&#10007; Out of pocket</td>
+            <td>Running costs (insurance, rego, servicing)</td>
+            <td class="check">&#10003; Pre-tax &amp; bundled</td>
+            <td class="cross">&#10007; After-tax &amp; separate</td>
           </tr>
           <tr>
             <td>Upfront cost</td>
-            <td class="check">&#10003; $0</td>
+            <td class="check">&#10003; $0 deposit</td>
             <td class="cross">&#10007; $30,000+</td>
           </tr>
           <tr>
-            <td>Reduces taxable income</td>
-            <td class="check">&#10003; Every pay</td>
-            <td class="cross">&#10007; No benefit</td>
+            <td>Typical annual tax saving</td>
+            <td class="check">&#10003; $4,000 – $11,000+</td>
+            <td class="cross">&#10007; $0</td>
           </tr>
         </tbody>
       </table>
@@ -1490,24 +1512,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="section-inner">
     <div class="section-header">
       <div class="section-label">Simple process</div>
-      <h2 class="section-title">Three steps to your new EV</h2>
-      <p class="section-sub">We handle the hard stuff. You handle the driving.</p>
+      <h2 class="section-title">Three steps to start saving</h2>
+      <p class="section-sub">We handle the hard stuff. You keep the tax savings.</p>
     </div>
     <div class="hiw-steps">
       <div class="hiw-step">
         <div class="hiw-num">1</div>
-        <h3>Get Your Price</h3>
-        <p>Tell us what you're after. We'll show you exactly what you'll pay after tax — before you commit to anything.</p>
+        <h3>See Your Savings</h3>
+        <p>Tell us the car you want and your salary. We'll show you exactly how much you'll save in tax — before you commit.</p>
       </div>
       <div class="hiw-step">
         <div class="hiw-num">2</div>
-        <h3>We Handle Everything</h3>
-        <p>Our team liaises with your employer's payroll and manages the entire setup. It takes minutes on your end.</p>
+        <h3>We Set It Up</h3>
+        <p>Our team liaises with your employer's payroll. Salary packaging is arranged so deductions start from your pre-tax pay.</p>
       </div>
       <div class="hiw-step">
         <div class="hiw-num">3</div>
-        <h3>Drive Away Saving</h3>
-        <p>Your repayments come out pre-tax via salary sacrifice — every payment reduces your taxable income automatically.</p>
+        <h3>Watch Your Tax Drop</h3>
+        <p>Every pay cycle, your taxable income is lower. You keep more in your pocket — automatically, every fortnight.</p>
       </div>
     </div>
   </div>
@@ -1516,9 +1538,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─── MID-PAGE CTA ─── -->
 <section class="mid-cta">
   <div class="mid-cta-inner">
-    <h2>Ready to see your price?</h2>
-    <p>Get a personalised quote in 60 seconds — no obligation, no credit check.</p>
-    <a href="#quote" class="btn btn-yellow">Get My Price →</a>
+    <h2>How much could you save?</h2>
+    <p>Get your personalised tax savings breakdown in 60 seconds — no obligation.</p>
+    <a href="#quote" class="btn btn-yellow">Calculate My Savings →</a>
   </div>
 </section>
 
@@ -1528,17 +1550,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="section-header">
       <div class="section-label">Customer reviews</div>
       <h2 class="section-title">Don't just take our word for it</h2>
-      <p class="section-sub">Real customers. Real savings. Real Google reviews.</p>
+      <p class="section-sub">Based on 4 Google reviews &nbsp;★★★★★ 5.0</p>
     </div>
     <div class="testi-grid">
 
       <div class="testi-card">
         <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-quote">"I honestly had no idea how much I was leaving on the table by just buying a car outright. The Bright Leasing team walked me through everything — I'm now driving a Tesla Model Y and saving over $900 a month compared to what I was paying before."</p>
+        <p class="testi-quote">"I have had Jaime manage my novated leases before so jumped to him when I saw he started out on his own. Bright leasing truly puts the customer at the centre and you feel it."</p>
         <div class="testi-author">
           <div class="testi-avatar">MJ</div>
           <div>
-            <div class="testi-name">Mark J.</div>
+            <div class="testi-name">Mark Jelleison</div>
+            <div class="testi-role">Verified Google Review</div>
             <div class="testi-source">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
               Google Review
@@ -1549,11 +1572,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="testi-card">
         <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-quote">"Super easy process from start to finish. I was skeptical about novated leasing at first but the team made it effortless. My payroll handles everything automatically and I just drive. The monthly cost is way better than I expected."</p>
+        <p class="testi-quote">"Jamie's been a great help and made the process super simple. Very responsive and checks in regularly to make sure everything's going well. Definitely recommend!"</p>
         <div class="testi-author">
-          <div class="testi-avatar">J</div>
+          <div class="testi-avatar">JF</div>
           <div>
-            <div class="testi-name">Jake</div>
+            <div class="testi-name">Jake F.</div>
+            <div class="testi-role">Verified Google Review</div>
             <div class="testi-source">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
               Google Review
@@ -1564,16 +1588,87 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="testi-card">
         <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testi-quote">"The FBT exemption is a genuine game-changer and Bright Leasing explained it better than anyone else I spoke to. They handled all the employer paperwork, got everything set up in about a week. The whole-of-life cost is outstanding value."</p>
+        <p class="testi-quote">"Absolutely fantastic to deal with, nothing was a problem. Highly recommend!!"</p>
         <div class="testi-author">
           <div class="testi-avatar">SS</div>
           <div>
-            <div class="testi-name">Shane S.</div>
+            <div class="testi-name">Shane Soar</div>
+            <div class="testi-role">Verified Google Review</div>
             <div class="testi-source">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
               Google Review
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"Jamie from Bright Leasing was absolutely fantastic to deal with from start to finish. He made the whole process of getting my EV novated lease sorted incredibly smooth and stress-free. His knowledge, responsiveness, and genuine willingness to help made all the difference."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">ME</div>
+          <div>
+            <div class="testi-name">Mena Elchagie</div>
+            <div class="testi-role">Verified Google Review</div>
+            <div class="testi-source">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              Google Review
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+        <h2 class="section-title" style="color:#ffffff;">Good questions. Here are the honest answers.</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Will my employer agree to this?
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-a">
+          <p>Almost certainly yes — novated leasing is one of the most popular employee benefits in Australia, and most employers are already set up to offer it. All it takes is a simple payroll deduction arrangement, and there's no cost or risk to your employer whatsoever.</p>
+          <p style="margin-top:12px;">If your employer isn't already on board, we handle the conversation for you. We'll reach out to your HR or payroll team with everything they need to get you set up — typically within a few business days. Many of the employers we work with were first introduced to novated leasing by an employee just like you.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What happens if I change jobs?
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-a">
+          <p>Changing jobs doesn't mean losing your car. The lease stays with you — it simply transfers to your new employer's payroll. If your new employer is already set up for novated leasing, the switch is usually seamless. If they're not, we'll get them set up quickly.</p>
+          <p style="margin-top:12px;">In the unlikely event your new employer won't participate, you have a few straightforward options: pay the lease instalments directly yourself during the gap period, refinance, or in some cases end the lease early. We'll walk you through exactly what applies to your situation — there's no need to stress about it before it happens.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What's actually included in my lease payments?
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-a">
+          <p>That's one of the best parts. A novated lease bundles all of your car running costs into a single regular payment — so you're not just financing the vehicle, you're covering fuel, registration, insurance, servicing, and tyres as well. All of those costs are drawn from your pre-tax salary, compounding your savings.</p>
+          <p style="margin-top:12px;">At the end of the lease term, you can choose to sell the car and get another one, buy the car for its residual value or re-lease it. Most of our customers find the all-in payment is actually less than what they were spending across all those costs separately — with far less hassle along the way.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is this actually legal — or too good to be true?
+          <span class="faq-arrow">&#9662;</span>
+        </button>
+        <div class="faq-a">
+          <p>Completely legal — and the ATO knows all about it. Novated leasing is a form of salary packaging that's been part of Australian tax law for decades. The tax benefit comes from paying for your car using pre-tax salary, which reduces your taxable income. It's not a loophole; it's a legislated employee benefit that hundreds of thousands of Australians use every year.</p>
+          <p style="margin-top:12px;">The savings are real because the structure is legitimate. You still pay Fringe Benefits Tax (FBT) on the benefit, but in most cases the overall tax outcome is significantly better than buying a car outright or with a standard loan. We're fully transparent about every number — what you save, what you pay, and why.</p>
         </div>
       </div>
 
@@ -1584,10 +1679,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─── BOTTOM CTA ─── -->
 <section class="bottom-cta" id="contact">
   <div class="bottom-cta-inner">
-    <h2>Your EV could cost as little as <span>$147/week</span></h2>
-    <p>Get a personalised quote in 60 seconds. We'll show you exactly what you'll pay — no obligation, no pushy sales calls.</p>
+    <h2>You could save <span>$7,115*</span> this financial year</h2>
+    <p>See your personalised tax savings in 60 seconds. No obligation, no pushy sales calls.</p>
     <div class="cta-actions">
-      <a href="#quote" class="btn btn-yellow" style="font-size:1rem; padding: 15px 32px;">Get My Price →</a>
+      <a href="#quote" class="btn btn-yellow" style="font-size:1rem; padding: 15px 32px;">Calculate My Savings →</a>
       <div class="cta-divider"></div>
       <a href="tel:1300988938" class="cta-phone-link">
         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" color="#52BAC7"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -1648,7 +1743,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─── JAVASCRIPT ─── -->
 <!-- ─── STICKY MOBILE CTA ─── -->
 <div class="mobile-sticky-cta" id="mobileCta">
-  <a href="#quote" class="btn btn-yellow">Get My Price — From $147/wk →</a>
+  <a href="#quote" class="btn btn-yellow">See My Tax Savings →</a>
 </div>
 
 <script>
@@ -1719,17 +1814,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         return;
       }
     }
-    if (current === 4) {
-      if (!document.getElementById('wiz-employer').value.trim()) {
-        document.getElementById('wiz-employer').style.borderColor = '#e74c3c';
-        return;
-      }
-    }
+    // Step 4 employer is optional — no validation required
     showStep(current + 1);
   }
 
   function wizardBack(current) {
     showStep(current - 1);
+  }
+
+  function toggleFaq(btn) {
+    var answer = btn.nextElementSibling;
+    var isOpen = btn.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-q.open').forEach(function(b) {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('visible');
+    });
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('visible');
+    }
   }
 
   async function wizardSubmit() {
@@ -1777,7 +1881,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         { name: 'traffic_source', value: trafficSource },
         { name: 'gclid', value: gclid },
         { name: 'fbclid', value: fbclid },
-        { name: 'landing_page_source', value: 'price-leader' }
+        { name: 'landing_page_source', value: 'tax-saver' }
       ],
       context: {
         pageUri: window.location.href,
