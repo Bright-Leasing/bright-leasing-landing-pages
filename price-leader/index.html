@@ -1032,18 +1032,18 @@
     .faq-inner { max-width: 780px; margin: 0 auto; }
     .faq-section .section-title { color: #ffffff; margin-bottom: 40px; }
     .faq-section .section-label { color: #52BAC7; }
-    .faq-item { background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.1); border-radius: 0; overflow: hidden; }
-    .faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.1); }
+    .faq-item { background: #52BAC7; border: none; border-bottom: 4px solid #162130; border-radius: 8px; overflow: hidden; margin-bottom: 4px; }
+    .faq-item:first-child { border-top: none; }
     .faq-q {
       width: 100%;
       background: none;
       border: none;
-      color: #ffffff;
+      color: #FFBD34;
       font-family: inherit;
       font-size: 1rem;
       font-weight: 600;
       text-align: left;
-      padding: 22px 0;
+      padding: 22px 24px;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
@@ -1051,11 +1051,11 @@
       gap: 16px;
       line-height: 1.4;
     }
-    .faq-q:hover { background: transparent; color: #FFBD34; }
-    .faq-arrow { font-size: 1.1rem; transition: transform 0.2s; flex-shrink: 0; color: #52BAC7; }
+    .faq-q:hover { background: transparent; color: #FFBD34; font-weight: 700; }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.2s; flex-shrink: 0; color: #0f1923; }
     .faq-q.open .faq-arrow { transform: rotate(180deg); }
-    .faq-a { display: none; padding: 0 0 20px; }
-    .faq-a p { color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0; font-size: 0.95rem; }
+    .faq-a { display: none; padding: 0 24px 20px; }
+    .faq-a p { color: #0f1923; line-height: 1.7; margin: 0; font-size: 0.95rem; }
     .faq-a.visible { display: block; }
 </style>
 </head>
@@ -1615,8 +1615,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─── COMMON QUESTIONS ─── -->
 <section class="faq-section" id="faq">
   <div class="faq-inner">
-    <div class="section-label">Common questions</div>
-    <h2 class="section-title">Good questions. Here are the honest answers.</h2>
     <div class="faq-list">
 
       <div class="faq-item">
