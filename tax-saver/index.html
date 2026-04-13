@@ -1047,7 +1047,54 @@
       .comparison-table th, .comparison-table td { padding: 12px 14px; font-size: 0.82rem; }
       .testi-grid { grid-template-columns: 1fr; }
     }
-  </style>
+      /* ─── FAQ ─── */
+    .faq { padding: 80px 24px; background: #162130; }
+    .faq .section-label { color: #52BAC7; }
+    .faq .section-title { color: #ffffff; }
+    .faq .section-sub { color: rgba(255,255,255,0.65); }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: left;
+      padding: 22px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      line-height: 1.4;
+    }
+    .faq-question:hover { color: #FFBD34; }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid #52BAC7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, background 0.2s;
+    }
+    .faq-item.open .faq-icon { background: #52BAC7; transform: rotate(45deg); }
+    .faq-icon svg { width: 12px; height: 12px; stroke: #52BAC7; transition: stroke 0.2s; }
+    .faq-item.open .faq-icon svg { stroke: #0f1923; }
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 400px; padding-bottom: 20px; }
+    .faq-answer p { color: rgba(255,255,255,0.65); font-size: 0.97rem; line-height: 1.75; margin: 0; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1263,11 +1310,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="trust-inner">
     <div class="trust-item">
       <div class="trust-icon">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
       </div>
       <div class="trust-text">
-        <strong>5.0 ★ Google Rating</strong>
-        <span>4 verified reviews</span>
+        <strong>$7,115 Tax Saved</strong>
+        <span>Average annual customer savings</span>
       </div>
     </div>
     <div class="trust-item">
@@ -1671,6 +1718,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="section-header" style="text-align:center; max-width:600px; margin:0 auto 48px;">
+      <div class="section-label">Got questions?</div>
+      <h2 class="section-title">Frequently asked questions</h2>
+      <p class="section-sub" style="margin:0 auto;">Everything you need to know about novated leasing with Bright.</p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Will my employer agree to this?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Almost certainly yes — novated leasing is one of the most popular employee benefits in Australia, and most employers are already set up to offer it. All it takes is a simple payroll deduction arrangement, and there's no cost or risk to your employer whatsoever.</p>
+          <p style="margin-top:12px;">If your employer isn't already on board, we handle the conversation for you. We'll reach out to your HR or payroll team with everything they need to get you set up — typically within a few business days. Many of the employers we work with were first introduced to novated leasing by an employee just like you.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What happens if I change jobs?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Changing jobs doesn't mean losing your car. The lease stays with you — it simply transfers to your new employer's payroll. If your new employer is already set up for novated leasing, the switch is usually seamless. If they're not, we'll get them set up quickly.</p>
+          <p style="margin-top:12px;">In the unlikely event your new employer won't participate, you have a few straightforward options: pay the lease instalments directly yourself during the gap period, refinance, or in some cases end the lease early. We'll walk you through exactly what applies to your situation — there's no need to stress about it before it happens.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What's actually included in my lease payments?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>That's one of the best parts. A novated lease bundles all of your car running costs into a single regular payment — so you're not just financing the vehicle, you're covering fuel, registration, insurance, servicing, and tyres as well. All of those costs are drawn from your pre-tax salary, compounding your savings.</p>
+          <p style="margin-top:12px;">At the end of the lease term, you can choose to sell the car and get another one, buy the car for its residual value or re-lease it. Most of our customers find the all-in payment is actually less than what they were spending across all those costs separately — with far less hassle along the way.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is this actually legal — or too good to be true?
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Completely legal — and the ATO knows all about it. Novated leasing is a form of salary packaging that's been part of Australian tax law for decades. The tax benefit comes from paying for your car using pre-tax salary, which reduces your taxable income. It's not a loophole; it's a legislated employee benefit that hundreds of thousands of Australians use every year.</p>
+          <p style="margin-top:12px;">The savings are real because the structure is legitimate. You still pay Fringe Benefits Tax (FBT) on the benefit, but in most cases the overall tax outcome is significantly better than buying a car outright or with a standard loan. We're fully transparent about every number — what you save, what you pay, and why.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ─── BOTTOM CTA ─── -->
 <section class="bottom-cta" id="contact">
   <div class="bottom-cta-inner">
@@ -1935,5 +2041,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 </script>
 
+<script>
+    // ─── FAQ accordion ───
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el) {
+          el.classList.remove('open');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+</script>
 </body>
 </html>
