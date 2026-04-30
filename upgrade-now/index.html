@@ -1832,11 +1832,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     })(rawPhone);
     const email = document.getElementById('wiz-email').value.trim();
 
-    if (!fname || !lname || !phone || !email) {
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+    if (!fname || !lname || !rawPhone || !email || !emailValid) {
       if (!fname) document.getElementById('wiz-fname').style.borderColor = '#e74c3c';
       if (!lname) document.getElementById('wiz-lname').style.borderColor = '#e74c3c';
-      if (!phone) document.getElementById('wiz-phone').style.borderColor = '#e74c3c';
-      if (!email) document.getElementById('wiz-email').style.borderColor = '#e74c3c';
+      if (!rawPhone) document.getElementById('wiz-phone').style.borderColor = '#e74c3c';
+      if (!email || !emailValid) document.getElementById('wiz-email').style.borderColor = '#e74c3c';
       return;
     }
 
