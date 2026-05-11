@@ -1208,10 +1208,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Step 4: Employer -->
       <div class="wizard-step" data-step="4">
         <div class="wizard-header"></div>
-        <h2 class="wizard-question">Where do you currently work? <span style="font-size:0.75em;font-weight:400;color:#888;">(optional)</span></h2>
+        <h2 class="wizard-question">Where do you currently work?</h2>
         <div class="wizard-body">
-          <input type="text" class="wizard-input" id="wiz-employer" placeholder="e.g. Woolworths, BHP, NSW Health" style="text-align: left;" />
-          <p class="wizard-hint">Optional — helps us give a more accurate quote. We won't contact them.</p>
+          <input type="text" class="wizard-input" id="wiz-employer" placeholder="e.g. Woolworths, BHP, NSW Health" style="text-align: left;" required />
+          <p class="wizard-hint">Helps us give a more accurate quote. We won't contact them.</p>
           <button class="wizard-next" onclick="wizardNext(4)">Next</button>
         </div>
         <div class="wizard-progress">
@@ -1814,7 +1814,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         return;
       }
     }
-    // Step 4 employer is optional — no validation required
+    if (current === 4) {
+      if (!document.getElementById('wiz-employer').value.trim()) {
+        document.getElementById('wiz-employer').style.borderColor = '#e74c3c';
+        return;
+      }
+    }
     showStep(current + 1);
   }
 
